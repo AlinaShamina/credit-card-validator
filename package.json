@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "start": "webpack serve --mode development",
-  "build": "webpack --mode production",
-  "test": "jest",
-  "test:e2e": "jest --config ./e2e/jest-e2e.config.js"
-},
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "test": "jest",
+    "test:e2e": "jest __tests__/e2e"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlinaShamina/credit-card-validator.git"
@@ -23,14 +23,19 @@
   "devDependencies": {
     "@babel/core": "^7.28.5",
     "@babel/preset-env": "^7.28.5",
+    "babel-jest": "^30.2.0",
     "babel-loader": "^10.0.0",
+    "buffer": "^6.0.3",
     "copy-webpack-plugin": "^13.0.1",
+    "crypto-browserify": "^3.12.1",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.5",
+    "jest": "^30.2.0",
+    "puppeteer": "^24.31.0",
     "style-loader": "^4.0.0",
     "webpack": "^5.103.0",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.2"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.2"
   }
 }

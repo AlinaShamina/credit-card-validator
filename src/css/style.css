@@ -1,0 +1,48 @@
+.card-validator {
+  max-width: 350px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.cards-list {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.cards-list img {
+  width: 40px;
+  opacity: 0.3; /* неактивные */
+  transition: opacity 0.2s;
+}
+
+.cards-list img.active {
+  opacity: 1;
+}
+
+input.card-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button.validate-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #2d72d9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+}
