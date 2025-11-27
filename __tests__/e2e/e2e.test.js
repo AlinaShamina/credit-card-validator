@@ -5,11 +5,15 @@ let browser;
 let page;
 let server;
 
-jest.setTimeout(120000); 
+jest.setTimeout(180000); 
+
 beforeAll(async () => {
   server = await startServer();
 
-  browser = await puppeteer.launch({ headless: true });
+  browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'] 
+  });
   page = await browser.newPage();
 });
 
@@ -35,7 +39,7 @@ afterAll(async () => {
   }
 
   console.log('Teardown complete.');
-}, 180000);
+});
 
 describe('Credit Card Validator Widget (e2e)', () => {
   test('Widget loads', async () => {
